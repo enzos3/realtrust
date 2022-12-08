@@ -1,0 +1,130 @@
+@import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&display=swap');
+header {
+    height: 100vh;
+    padding-top: 7rem;
+    overflow: hidden;
+}
+
+.header__container {
+    text-align: center;
+    height: 100%;
+    position: relative;
+}
+
+.header__container h5 {
+    color: var(--color-light);
+}
+
+/* CTA */
+
+.cta {
+    margin-top: 2.5rem;
+    display: flex;
+    gap: 1.2rem;
+    justify-content: center;
+}
+
+.cta > a:hover{
+    background: var(--color-bg-variant);
+}
+
+/* Header Socials */
+
+.header__socials {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 0.8rem;
+    position: absolute;
+    left: 0;
+    bottom: 15rem;
+}
+
+.header__socials > a:hover{
+    color: var(--color-bg-variant);
+}
+
+.header__socials::after {
+    content: "";
+    width: 1px;
+    height: 2rem;
+    background: var(--color-primary);
+}
+
+.me{
+    margin-top: 10rem;
+}
+
+.me h1 {
+    text-align: center;
+    margin-top: 2rem;
+    font-size: 15rem;
+    font-family: 'Bebas Neue', sans-serif;
+    line-height: 1;
+    /* width: 20rem;
+    height: 20rem; */
+    color: red;
+    font-weight: 900;
+    font-style: italic;
+    background-image: var(--gradient);
+    -webkit-background-clip: text;
+    color: transparent;
+    background-size: 400%;
+    animation: bg-animation 5s infinite alternate;
+    
+    
+}
+
+@keyframes bg-animation{
+    0%{
+        background-position: left;
+    }
+    100%{
+        background-position: right;
+    }
+}
+
+/* Scroll Down */
+
+.scroll__down {
+    position: absolute;
+    right: -2.3rem;
+    bottom: 5rem;
+    transform: rotate(90deg);
+    font-weight: 300;
+    font-size: 0.9rem;
+}
+
+/* MQ (Medium Device) */
+
+@media screen and (max-width: 1024px) {
+    header {
+        height: 100vh;
+    }
+}
+
+/* MQ (Small Device) */
+
+@media screen and (max-width: 600px) {
+    header {
+        height: 100vh;
+    }
+
+    .header__socials,
+    .scroll__down {
+        display: none;
+    }
+
+    .me {
+        left: 1rem;
+        width: 20rem;
+    }
+
+    .me h1{
+        font-size: 8rem;
+    }
+
+    .me img {
+        width: 11.5rem;
+    }
+}
